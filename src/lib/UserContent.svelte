@@ -17,6 +17,10 @@
     @apply rounded-md my-5;
   }
 
+  div :global(a) {
+    @apply underline underline-offset-4 decoration-dotted text-blue-200;
+  }
+
   div :global(strong) {
     @apply font-semibold;
   }
