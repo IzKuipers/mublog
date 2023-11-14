@@ -12,16 +12,26 @@ export const primaryLanguage: string = "en";
 
 /* The default author to use when publishing blogs */
 export const defaultAuthor: Author = {
-  name: "John Smith",
-  shortName: "John",
-  url: "https://example.com",
+  name: "Izaak Kuipers",
+  shortName: "Izaak",
+  url: "https://izkuipers.nl",
 };
 
 /* Resources to link to */
 export const links: Link[] = [
-  // {
-  //   icon: "mdi:link-variant",
-  //   title: "Website",
-  //   url: "https://example.com",
-  // },
+  {
+    icon: "ph:link-bold",
+    title: "Website",
+    url: "https://izkuipers.nl",
+  },
+  {
+    icon: "mdi:github",
+    title: "GitHub",
+    url: "https://izkuipers.nl",
+  },
+  {
+    icon: "mdi:twitter",
+    title: "Twitter",
+    url: "https://twitter.com/izkuipers",
+  },
 ];
