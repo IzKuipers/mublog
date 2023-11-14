@@ -2,7 +2,7 @@ import type { Link } from "$lib/modules/config";
 import type { Author } from "$lib/modules/post";
 
 /* Blog title */
-export const title: string = "Blog Title";
+export const title: string = "IzKuipers' blog";
 
 /* Blog URL */
 export const url: string = "http://localhost:5173";
