@@ -1,7 +1,7 @@
 import { getPost } from "$lib/server/post";
 import { error } from "@sveltejs/kit";
 
-export async function load({ params }) {
+export async function load({ params }: any) {
   const post = await getPost(params.post);
 
   if (!post) {
