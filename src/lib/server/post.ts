@@ -25,7 +25,7 @@ export async function getSummaries(): Promise<PostSummary[]> {
           subtitle: meta.subtitle,
           cover: meta.cover,
           published: parseDate(meta.published),
-          slug: item.replace(/^posts\/(.*)\.md$/, "$1"),
+          slug: item.replace(/^posts(?:\/|\\)(.*)\.md$/, "$1"),
         };
       })
     )

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Source+Code+Pro:wght@400;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,6 +6,8 @@
 @layer base {
   html {
     @apply text-lg md:text-xl;
+    font-family: "Nunito Sans", sans-serif;
+    line-height: 1.5;
   }
 }
 
@@ -14,6 +17,6 @@
   }
 
   .link-emphasis {
-    @apply underline underline-offset-8 decoration-dotted;
+    @apply underline underline-offset-4 decoration-dotted;
   }
 }

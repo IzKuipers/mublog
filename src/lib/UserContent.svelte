@@ -18,7 +18,7 @@
   }
 
   div :global(a) {
-    @apply underline;
+    @apply underline underline-offset-4 decoration-dotted text-blue-200;
   }
 
   div :global(strong) {
@@ -42,11 +42,11 @@
   }
 
   div :global(h3) {
-    @apply text-lg detail;
+    @apply text-lg;
   }
 
   div :global(blockquote) {
-    @apply border-l-2 px-4 py-3 detail italic;
+    @apply border-l-2 px-4 py-3 italic;
   }
 
   div :global(blockquote p) {
@@ -80,5 +80,18 @@
 
   div :global(hr) {
     @apply my-6;
+  }
+
+  div :global(code) {
+    @apply bg-zinc-900 p-0.5 px-1 rounded-md;
+    font-family: "Source Code Pro", monospace;
+  }
+
+  div :global(pre:has(code)) {
+    @apply bg-zinc-900 p-2 rounded-md max-w-lg;
+  }
+
+  div :global(pre:has(code) code) {
+    @apply p-0;
   }
 </style>
