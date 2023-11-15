@@ -1,5 +1,7 @@
 import type { PostMeta, Post, PostSummary } from "$lib/modules/post";
-import { marked } from "marked";
+import { Marked, marked } from "marked";
+import { markedHighlight } from "marked-highlight";
+import hljs from "highlight.js";
 import frontMatter from "front-matter";
 import { readFile } from "fs/promises";
 import { glob } from "glob";
@@ -41,9 +43,19 @@ export async function getPost(slug: string): Promise<Post | undefined> {
   const entry = await readFile(path, "utf-8");
   const { attributes: meta, body: content } = frontMatter<PostMeta>(entry);
 
+  const marked = new Marked(
+    markedHighlight({
+      langPrefix: `hljs language-`,
+      highlight(code, lang) {
+        const language = hljs.getLanguage(lang) ? lang : "plaintext";
+        return hljs.highlight(code, { language }).value;
+      },
+    })
+  );
+
   return {
     slug,
-    content: marked(content),
+    content: await marked.parse(content),
     published: parseDate(meta.published),
     title: meta.title,
     subtitle: meta.subtitle,
