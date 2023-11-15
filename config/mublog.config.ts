@@ -27,7 +27,7 @@ export const links: Link[] = [
   {
     icon: "mdi:github",
     title: "GitHub",
-    url: "https://izkuipers.nl",
+    url: "https://github.com/izkuipers",
   },
   {
     icon: "mdi:twitter",
