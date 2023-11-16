@@ -90,7 +90,7 @@
   }
 
   div :global(pre:has(code)) {
-    @apply bg-zinc-300 dark:bg-zinc-900 p-2 rounded-md mb-2;
+    @apply bg-zinc-300 dark:bg-zinc-900 p-2 rounded-md mb-2 text-xs;
     overflow-x: scroll;
   }
 
