@@ -35,3 +35,6 @@ export const links: Link[] = [
     url: "https://twitter.com/izkuipers",
   },
 ];
+
+/* Whether to show the 'powered by'-footer */
+export const showPoweredBy: boolean = true;
